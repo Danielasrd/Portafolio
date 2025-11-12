@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Personal - Daniela Rodríguez</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        /* Colores Pastel Suaves */
+        :root {
+            --bg-light: #F8F9FA; /* Blanco muy suave para el fondo principal */
+            --bg-card: #FFF0F5; /* Rosa Claro Sutil (Lavender Blush) para el fondo de las tarjetas */
+            --text-dark: #343A40; /* Gris oscuro para texto principal */
+            --text-light-gray: #6C757D; /* Gris medio para texto secundario */
+            --pastel-pink: #FFD1DC; /* Rosa Pastel (Énfasis 1) */
+            --pastel-blue: #A7D9FF; /* Azul Pastel (Énfasis 2) */
+            --neon-pink: #FF69B4; /* Rosa Neón Intenso (Hot Pink) para el brillo */
+            --border-light: #E9ECEF; /* Gris muy claro para bordes */
+            --shadow-soft: rgba(0, 0, 0, 0.08); /* Sombra suave */
+        }
+        
+        /* Aplicación de fuentes y colores base */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--pastel-blue); /* CAMBIADO: Ahora es azul pastel */
+            color: var(--text-dark);
+            min-height: 100vh;
+        }
+
+        /* Estilo general de las tarjetas con sombras suaves y fondo rosa claro */
+        .creative-card {
+            background-color: var(--bg-card); /* Fondo rosa claro sutil */
+            border: 1px solid var(--border-light);
+            border-radius: 1.5rem; /* Bordes más redondeados */
+            box-shadow: 0 5px 15px -3px var(--shadow-soft);
+            transition: 
+                transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+                box-shadow 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Transición suave */
+        }
+
+        /* Efecto de borde Neon Pink al pasar el cursor */
+        .creative-card:hover {
+            transform: translateY(-8px) scale(1.02); /* Se eleva y crece un poco */
+            border-color: var(--neon-pink); /* Cambio de borde */
+            box-shadow: 
+                0 0 5px var(--neon-pink), 
+                0 0 15px var(--neon-pink), 
+                0 10px 20px -5px rgba(0, 0, 0, 0.2); /* Múltiples sombras para efecto glow */
+        }
+
+        /* Estilo de los botones de acción principal (Rosa Pastel) */
+        .creative-button {
+            background-color: var(--pastel-pink);
+            color: var(--text-dark);
+            font-weight: 600;
+            border-radius: 0.75rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(255, 209, 220, 0.6);
+        }
+
+        .creative-button:hover {
+            background-color: var(--pastel-blue); /* Cambio a azul pastel en hover */
+            color: var(--text-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(167, 217, 255, 0.7);
+        }
+        
+        /* Estilo para los títulos de sección principales */
+        .section-title-pastel {
+            color: var(--neon-pink); /* Usando el neón para los títulos principales */
+            font-family: 'Poppins', sans-serif;
+            border-bottom: 2px solid var(--pastel-blue);
+        }
+
+        /* Estilo para las etiquetas de habilidades (Azul Pastel) */
+        .skill-tag-pastel {
+            background-color: var(--pastel-blue);
+            color: var(--text-dark);
+            border-radius: 0.75rem; /* Más redondeado */
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+
+        .skill-tag-pastel:hover {
+            background-color: var(--neon-pink);
+            color: white;
+            cursor: pointer;
+        }
+
+        /* Estilo para la imagen de perfil (Redonda con borde rosado) */
+        .profile-image-round-pastel {
+            border-radius: 9999px;
+            border: 4px solid var(--pastel-pink);
+            box-shadow: 0 0 15px rgba(255, 209, 220, 0.8);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container mx-auto p-6 md:p-12 max-w-6xl">
+        
+        <header class="mb-16 text-center pt-8">
+            <h1 class="text-6xl md:text-7xl font-extrabold mb-3 text-text-dark">
+                Daniela Rodríguez
+            </h1>
+            <p class="text-xl md:text-2xl text-text-light-gray font-light">
+                Estudiante de Informática
+            </p>
+        </header>
+
+        <main class="grid grid-cols-1 lg:grid-cols-3 gap-10 mb-20">
+
+            <section class="lg:col-span-1 p-8 creative-card h-fit">
+                <div class="text-center">
+                    <img src="./xxxxjhjshgn.jpg" 
+                         alt="Foto de Perfil de Daniela Rodriguez"
+                         onerror="this.onerror=null; this.src='https://placehold.co/400x400/FFD1DC/FFFFFF?text=Tu+Foto';"
+                         class="w-56 h-56 object-cover profile-image-round-pastel mx-auto mb-6">
+                    
+                    <h2 class="text-3xl font-bold text-text-dark mb-2">
+                        Daniela Rodríguez
+                    </h2>
+
+                    <div class="text-left mt-6 pt-4 border-t border-border-light">
+                        <h3 class="text-xl font-semibold text-neon-pink mb-3">
+                            ¡Contáctame!
+                        </h3>
+                        <p class="text-text-light-gray text-base mb-1">
+                            <span class="font-bold">Email:</span> serena.rodd@gmail.com
+                        </p>
+                        <p class="text-text-light-gray text-base mb-1">
+                            <span class="font-bold">Teléfono:</span> 04248673247
+                        </p>
+                        
+                    </div>
+                
+                    <div class="flex flex-col gap-4 mt-8">
+                        
+                        <a href="./cv daniela.pdf" download="CV_Daniela_Rodriguez.pdf"
+                           class="flex items-center justify-center text-center px-8 py-3 rounded-xl text-lg bg-pastel-blue/50 text-text-dark hover:bg-pastel-blue transition duration-300 shadow-md">
+                            <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                            Descargar Mi CV
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="lg:col-span-2 p-8 creative-card">
+                <h2 class="text-3xl font-bold mb-5 section-title-pastel pb-3">
+                    Sobre Mí
+                </h2>
+                <p class="text-lg mb-8 leading-relaxed text-text-dark">
+                    Estudiante de 8vo semestre de Informática con experiencia en Python, JavaScript, PostgreSQL, electrónica y Figma. Me defino como una persona proactiva y responsable, orientada al trabajo colaborativo y enfocada en impulsar el desarrollo y la entrega de soluciones robustas y funcionales.
+                </p>
+                
+                <h3 class="text-2xl font-semibold mb-4 text-text-dark border-b border-border-light pb-2">
+                    Mis Habilidades & Talentos
+                </h3>
+                <div class="flex flex-wrap gap-4 mb-8">
+                    <span class="px-4 py-2 text-base skill-tag-pastel">
+                        Python
+                    </span>
+                    <span class="px-4 py-2 text-base skill-tag-pastel">
+                        TypeScript
+                    </span>
+                    <span class="px-4 py-2 text-base skill-tag-pastel">
+                        PostgreSQL
+                    </span>
+                    <span class="px-4 py-2 text-base skill-tag-pastel">
+                        Electrónica (IoT)
+                    </span>
+                    <span class="px-4 py-2 text-base skill-tag-pastel">
+                        Figma
+                    </span>
+                </div>
+
+                <h4 class="text-xl font-semibold mb-3 text-text-dark">Competencias en Figma</h4>
+                <p class="text-text-light-gray mb-4">Para el diseño y prototipado efectivo en Figma, me enfoco en:</p>
+                <ul class="list-disc list-inside ml-4 space-y-2 text-text-light-gray">
+                   <li><strong>Diseño de Interfaces (UI):</strong> Creación de layouts visuales claros y atractivos.</li>
+                   <li><strong>Prototipado Interactivo:</strong> Conexión de pantallas para simular el flujo de usuario.</li>
+                   <li><strong>Sistemas de Diseño:</strong> Uso de componentes reutilizables y estilos consistentes.</li>
+                </ul>
+                <div class="mt-8 border-t border-border-light pt-6">
+                    <h3 class="text-2xl font-semibold mb-5 text-text-dark border-b border-border-light pb-2">
+                        Mi Camino Educativo
+                    </h3>
+                    
+                    <div class="mb-6 border-l-4 border-pastel-pink pl-6">
+                        <p class="font-bold text-xl text-text-dark">Licenciatura en Informática (En curso)</p>
+                        <p class="text-neon-pink font-medium text-sm">Universidad de Oriente – Núcleo Nueva Esparta (8vo Semestre)</p>
+                        <ul class="list-disc list-inside ml-4 text-text-light-gray text-sm mt-1">
+                            <li>Enfoque en desarrollo Frontend y Diseño de Experiencia de Usuario (UX/UI).</li>
+                        </ul>
+                    </div>
+                    
+                    <p class="text-base text-text-light-gray mt-4 border-t border-border-light pt-3">
+                        <span class="font-bold text-text-dark">Mis Intereses:</span> Pintar, dibujar, coser y tejer.
+                    </p>
+                </div>
+
+            </section>
+        </main>
+
+        <section class="mt-16 text-center">
+            <h2 class="text-4xl font-bold mb-10 section-title-pastel pb-3 inline-block">
+                Mis Proyectos & Creaciones
+            </h2>
+            <div class="flex justify-center mb-12">
+                <p class="text-lg text-text-light-gray max-w-2xl text-center">
+                    Echa un vistazo a algunos de los proyectos en los que he trabajado.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-1 gap-8 text-left max-w-lg mx-auto">
+                
+                <article class="flex flex-col p-6 creative-card">
+                    <div>
+                        <h3 class="text-xl font-bold mb-2 text-text-dark">
+                            Sistema de control de polizas de seguro para funerarias
+                        </h3>
+                        <p class="text-sm text-pastel-blue font-medium mb-3">Herramientas: PHP, JavaScript, CSS</p>
+                        
+                    </div>
+                    <a href="https://github.com/AlexMGP7/web-funeraria/blob/main/LICENSE" target="_blank" class="mt-auto text-base font-semibold text-neon-pink hover:text-pastel-blue transition duration-200 block text-right pt-4 border-t border-border-light">
+                        Ver Detalles <span aria-hidden="true">&rarr;</span>
+                    </a>
+                </article>
+
+                </div>
+        </section>
+
+        <footer class="text-center mt-20 pt-10 pb-10 border-t border-border-light">
+            <p class="text-text-light-gray">
+                &copy; <script>document.write(new Date().getFullYear())</script> Daniela Rodríguez.
+            </p>
+        </footer>
+
+    </div>
+</body>
+</html>
